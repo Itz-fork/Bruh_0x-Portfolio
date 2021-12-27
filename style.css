@@ -73,7 +73,7 @@ section .title::after{
     font-size: 20px;
     color: rgb(20, 197, 220);
     padding: 0 5px;
-    background: #fff;
+    background: rgb(247, 247, 247);
     transform: translateX(-50%);
 }
 
@@ -559,7 +559,14 @@ footer span a:hover{
     color: rgb(96, 210, 238);
     transition: .5s;
 }
+
 /*Social Icons*/
+.social-icons {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.1em 0.1em;
+    transition: ease-in-out 1s;
+}
 .fa-telegram{
     background: rgb(242, 249, 250);
     color: rgb(67, 219, 230);
@@ -575,28 +582,17 @@ footer span a:hover{
     border: rgb(67, 219, 230);
     border-radius: 50px;
     padding: 0.1em 0.1em;
-    margin-left: 15px;
+    margin-left: 0.5em;
 }
 .fa-twitter:hover{
     box-shadow: 0 0 8px 0 #0da1a7;
-}
-.fa-whatsapp {
-    background: rgb(40, 235, 56);
-    color: rgb(244, 255, 244);
-    border: rgb(67, 219, 230);
-    border-radius: 50%;
-    margin-left: 15px;
-    padding: 0.1em 0.1em;
-}
-.fa-whatsapp:hover{
-    box-shadow: 0 0 8px 0 #09b657;
 }
 .fa-github{
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     border: rgb(255, 255, 255);
     border-radius: 50px;
-    margin-left: 15px;
+    margin-left: 0.5em;;
 }
 .fa-github:hover{
     box-shadow: 0 0 8px 0 #1a1b1b;
