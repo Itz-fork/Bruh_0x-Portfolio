@@ -6,7 +6,7 @@ VANTA.HALO({
   el: "#halo",
   mouseControls: true,
   touchControls: true,
-  gyroControls: false,
+  gyroControls: true,
   minHeight: 200.0,
   minWidth: 200.0,
   baseColor: "#f11a7b",
