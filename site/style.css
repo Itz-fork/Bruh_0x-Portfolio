@@ -68,7 +68,7 @@ html {
 /* ------------------------------ About & Stats paragraphs ------------------------------ */
 .about_text,
 .stats {
-  margin-right: 45vw;
+  margin-right: 40vw;
 }
 
 .pr_lang {
@@ -191,5 +191,9 @@ html {
   /* Header text */
   .header_text {
     font-size: 5rem;
+  }
+
+  .about_text {
+    font-size: 1.1rem;
   }
 }
