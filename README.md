@@ -8,5 +8,5 @@ This is my personal website (temporary)
 
 ---
 
-- Website with fallback background image incase animation doesn't work
+- Website with fallback background image (incase animation doesn't work)
 ![Fallback](/screenshots/fallback.png)

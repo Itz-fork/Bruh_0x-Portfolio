@@ -145,6 +145,10 @@
 
 /* For mobile devices */
 @media only screen and (max-device-width: 768px) {
+  /* Main */
+  .main {
+    margin-top: 20vh;
+  }
   /* Social bar (bottom) */
   .socials {
     margin: auto;
@@ -165,10 +169,6 @@
 
 /* For Desktops & Tablets */
 @media only screen and (min-device-width: 800px) {
-  /* Main */
-  .main {
-    margin-top: 20vh;
-  }
   /* Social bar (side) */
   .socials {
     position: -webkit-sticky;
