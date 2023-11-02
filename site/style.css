@@ -1,6 +1,18 @@
-/* Fonts */
+/* Author: Hirusha Himath (https://github.com/Itz-fork)
+Repo: https://github.com/Itz-fork/itz-fork.github.io */
+
+/* ------------------------------ Fonts ------------------------------ */
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+/* ------------------------------ Disable text selection ------------------------------ */
+html {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 /* ------------------------------ Background ------------------------------ */
 #halo {
@@ -163,7 +175,7 @@
   }
   /* About text */
   .about_text {
-    margin-right: 30vw;
+    margin-right: 20vw;
   }
 }
 
