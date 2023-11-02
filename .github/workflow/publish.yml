@@ -1,0 +1,16 @@
+name: Publish github page
+
+on: push
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+
+      - name: Publish site to github pages
+        uses: rayluo/github-pages-overwriter@v1.3
+        with:
+          source-directory: "site"
+          target-branch: gh-pages
