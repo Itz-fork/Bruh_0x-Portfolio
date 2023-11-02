@@ -1,8 +1,12 @@
-# Bruh_0x-Portfolio
+# My personal website
+This is my personal website (temporary)
 
-ya know this is my portfolio :)
+## Screenshots
 
+- Default website with 3js animation
+![Default](/screenshots/default.png)
 
-# Credits
+---
 
-- Codingnepal
+- Website with fallback background image incase animation doesn't work
+![Fallback](/screenshots/fallback.png)
