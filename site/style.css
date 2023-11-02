@@ -165,6 +165,10 @@
 
 /* For Desktops & Tablets */
 @media only screen and (min-device-width: 800px) {
+  /* Main */
+  .main {
+    margin-top: 20vh;
+  }
   /* Social bar (side) */
   .socials {
     position: -webkit-sticky;
