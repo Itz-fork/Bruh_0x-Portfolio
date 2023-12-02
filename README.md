@@ -1,12 +1,6 @@
 # My personal website
-This is my personal website (temporary)
+Made with vanilla js, CSS and HTML ;)
 
-## Screenshots
+## Tools
 
-- Default website with 3js animation
-![Default](/screenshots/default.png)
-
----
-
-- Website with fallback background image (incase animation doesn't work)
-![Fallback](/screenshots/fallback.png)
+- [publish.sh](/publish) - Shell script to publish parcel.js apps to github pages (by @Itz-fork)

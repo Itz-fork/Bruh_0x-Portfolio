@@ -1,0 +1,50 @@
+#!usr/bin/env
+
+
+# Variables
+PKGM="pnpm"
+GHP_BRANCH="gh-pages"
+UPSTREAM_NM="ghupstream"
+REPO_URL="https://github.com/Itz-fork/itz-fork.github.io.git"
+FLAGS="--no-optimize"
+
+
+echo -e "> Creating build branch - ${GHP_BRANCH}"
+git checkout $GHP_BRANCH &> /dev/null || git checkout -b $GHP_BRANCH
+
+
+echo -e "> Building site..."
+if [ ! -d "node_modules" ]; then
+    echo -e "WARNING! \nnode_modules folder doesn't exist"
+    echo -e "> Installing dependencies... \n"
+    $PKGM install
+fi
+$PKGM build $FLAGS
+
+
+echo -e "> Setting up environment... \n\n"
+mkdir nodel
+mv dist nodel
+find ./ -mindepth 1 ! -regex '^./nodel\(/.*\)?' -delete
+mv nodel/dist/* ./
+rm -rf nodel
+
+echo -e "> Setting up git..."
+if [ ! -d ".git" ]; then
+    echo -e "WARNING! \nGit folder doesn't exist"
+    echo -e "> Initializing a new project... \n\n"
+    git init
+fi
+git add .
+git commit -m "feat: new build"
+git checkout $GHP_BRANCH &> /dev/null || git checkout -b $GHP_BRANCH
+git remote -v
+git remote add "${UPSTREAM_NM}" "${REPO_URL}"
+git push -u "${UPSTREAM_NM}" "${GHP_BRANCH}" --force
+
+
+echo -e "> Switching back to working branch \n\n"
+git checkout -
+
+
+echo -e "> Done"
