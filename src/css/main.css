@@ -127,22 +127,6 @@ button.sc_btns:hover:not(button.sc_btns) {
     overflow: auto;
 }
 
-.line {
-    margin-top: var(--vline-mh);
-    border-left: 2px solid #0000;
-    border-image: linear-gradient(var(--z-blue), var(--z-purple), var(--z-blue)) 10 stretch;
-    min-height: 60vh;
-    margin-left: 4vw;
-    position: absolute;
-}
-
-.line-con {
-    flex-direction: column;
-    margin-top: 10rem;
-    display: flex;
-    position: relative;
-}
-
 .greet {
     color: var(--z-white-text);
     font-size: 2rem;

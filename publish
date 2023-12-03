@@ -6,7 +6,7 @@ PKGM="pnpm"
 GHP_BRANCH="gh-pages"
 UPSTREAM_NM="ghupstream"
 REPO_URL="https://github.com/Itz-fork/itz-fork.github.io.git"
-FLAGS="--no-optimize"
+FLAGS=""
 
 
 echo -e "> Creating build branch - ${GHP_BRANCH}"

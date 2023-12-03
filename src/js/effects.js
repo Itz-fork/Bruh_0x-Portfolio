@@ -1,5 +1,12 @@
 // Author: Itz-fork
+
+
 //  Pre-defined variables
+const intWidth = window.innerWidth
+const intHeight = window.innerHeight
+const container = document.getElementById("sqbg");
+const cursor = document.getElementById("cursor");
+
 const size = 100;
 let columns = 0, rows = 0;
 const codes = [
@@ -39,9 +46,9 @@ const codes = [
     "struct Code",
     "interface Life"
 ];
-const container = document.getElementById("sqbg");
-const cursor = document.getElementById("cursor");
-// Background
+
+
+// Background grid
 function AddSqrs(sq) {
     while (sq > 0) {
         let sqrel = document.createElement("div");
@@ -60,7 +67,17 @@ const CalcGrid = () => {
     AddSqrs(columns * rows);
 };
 CalcGrid();
-window.onresize = () => CalcGrid();
+
+// Generate grid on resize
+window.onresize = () => {
+    // fix: stop regenerating grid on scroll (mobile)
+    if (curWidth == window.innerWidth && curHeight == window.innerHeight) {
+        return
+    }
+    CalcGrid()
+};
+
+// Mouse move effect
 window.onmousemove = (ev) => {
     const position = Math.floor(ev.x / 100) + Math.floor(ev.y / 100) * columns;
     const el = container.children[position];
@@ -82,12 +99,3 @@ window.onmousemove = (ev) => {
         }, 2000);
     } catch (e) { }
 };
-
-// Scroll helper
-function SGotoUntil(untilV = window.innerHeight) {
-    window.scrollBy({
-        top: untilV,
-        left: 100,
-        behavior: "smooth"
-    });
-}
