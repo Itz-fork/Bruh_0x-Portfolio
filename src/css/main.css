@@ -124,7 +124,7 @@ button.sc_btns:hover:not(button.sc_btns) {
     align-items: center;
     font-family: Space Grotesk, monospace;
     display: flex;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .greet {

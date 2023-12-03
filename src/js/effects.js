@@ -2,8 +2,8 @@
 
 
 //  Pre-defined variables
-const intWidth = window.innerWidth
-const intHeight = window.innerHeight
+var intWidth = window.innerWidth
+var intHeight = window.innerHeight
 const container = document.getElementById("sqbg");
 const cursor = document.getElementById("cursor");
 
@@ -70,17 +70,19 @@ CalcGrid();
 
 // Generate grid on resize
 window.onresize = () => {
-    // fix: stop regenerating grid on scroll (mobile)
-    if (curWidth == window.innerWidth && curHeight == window.innerHeight) {
-        return
+    let curWidth = window.innerWidth
+    let curHeight = window.innerHeight
+    if (curWidth != intWidth || curHeight != intHeight) {
+        CalcGrid()
+        intWidth = curWidth
+        intHeight = curHeight
     }
-    CalcGrid()
 };
 
 // Mouse move effect
 window.onmousemove = (ev) => {
-    const position = Math.floor(ev.x / 100) + Math.floor(ev.y / 100) * columns;
-    const el = container.children[position];
+    let position = Math.floor(ev.x / 100) + Math.floor(ev.y / 100) * columns;
+    let el = container.children[position];
     try {
         el.animate({
             opacity: [
