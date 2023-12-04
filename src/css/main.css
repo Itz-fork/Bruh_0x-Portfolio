@@ -56,12 +56,12 @@ button.sc_btns:hover:not(button.sc_btns) {
 @keyframes loop-bg {
     from {
         background-position: 0%;
-        transform: scale(1);
+        transform: scale(1.3);
     }
 
     to {
         background-position: -200%;
-        transform: scale(1.1);
+        transform: scale(1);
     }
 }
 
@@ -95,21 +95,21 @@ button.sc_btns:hover:not(button.sc_btns) {
 
 #sqbg {
     color: #f0f8ff;
-    filter: brightness(40%);
-    text-align: center;
+    display: grid;
     z-index: -1;
+    gap: 2px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    text-align: center;
+    filter: brightness(40%);
     grid-template-columns: repeat(var(--columns), 1fr);
     grid-template-rows: repeat(var(--rows), 1fr);
     background: linear-gradient(to right, #ed5ab3, #1640d6, #ed5ab3) 0 0 / 200%;
-    gap: 2px;
-    width: 100%;
-    height: 100%;
-    animation: 7s infinite alternate loop-bg;
-    display: grid;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: hidden;
+    animation: 5s 1 alternate loop-bg;
 }
 
 .sqr_block {
@@ -163,7 +163,7 @@ button.sc_btns:hover:not(button.sc_btns) {
 
 footer {
     text-align: center;
-    background-color: #ffd6ff80;
+    background-color: #e6afe680;
     border-radius: 10px;
     width: 100%;
     min-height: 20vh;
@@ -176,7 +176,7 @@ footer {
 
 footer>.footer_text {
     color: #fefae0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: var(--z-font);
     margin-top: 1.5rem;
     display: inline-block;
