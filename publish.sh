@@ -26,13 +26,13 @@ RESET="\033[0m"
 
 # ------------------ Output functions ------------------#
 say_sh() {
-    echo -e "${CYAN}$1${RESET}\n\n"
+    echo -e "${CYAN}$1${RESET}\n"
 }
 info_sh() {
-    echo -e "   ${WHITE}$1${RESET}\n\n"
+    echo -e "   ${WHITE}$1${RESET}\n"
 }
 warn_sh() {
-    echo -e "${RED}WARNING !\n $1${RESET}\n\n"
+    echo -e "${RED}WARNING !\n $1${RESET}\n"
 }
 
 
