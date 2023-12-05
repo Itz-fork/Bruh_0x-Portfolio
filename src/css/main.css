@@ -132,7 +132,7 @@ button.sc_btns:hover:not(button.sc_btns) {
     color: #808080e6;
     z-index: 100;
     filter: blur(5px);
-    filter: brightness(30%);
+    filter: brightness(50%);
     -webkit-user-select: none;
     user-select: none;
     background-color: #000000e6;
