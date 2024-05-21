@@ -72,7 +72,7 @@ CalcGrid();
 window.onresize = () => {
     let curWidth = window.innerWidth
     let curHeight = window.innerHeight
-    if (curWidth != intWidth || curHeight != intHeight) {
+    if (curWidth != intWidth && curHeight != intHeight) {
         CalcGrid()
     }
 };
