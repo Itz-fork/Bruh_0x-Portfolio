@@ -9,7 +9,7 @@ html {
     scroll-behavior: smooth;
 }
 
-h2 {
+.sec_title {
     text-decoration: underline;
 }
 
@@ -169,6 +169,8 @@ button.sc_btns:hover:not(button.sc_btns) {
     font-family: Sintony, sans-serif;
     font-size: 3rem;
 }
+
+
 
 
 /* About section */
