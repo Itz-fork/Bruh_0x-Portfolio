@@ -50,14 +50,18 @@ const codes = [
 
 // Background grid
 function AddSqrs(sq) {
+    const fragment = document.createDocumentFragment();
     while (sq > 0) {
         let sqrel = document.createElement("div");
         sqrel.classList.add("sqr_block");
         sqrel.innerText = codes[Math.floor(Math.random() * codes.length)];
-        container.appendChild(sqrel);
+        fragment.appendChild(sqrel);
         sq--;
     }
+    container.appendChild(fragment);
 }
+
+// Calculate grid
 const CalcGrid = () => {
     container.innerHTML = "";
     columns = Math.floor(window.innerWidth / size);
@@ -70,8 +74,8 @@ CalcGrid();
 
 // Generate grid on resize
 window.onresize = () => {
-    let curWidth = window.innerWidth
-    let curHeight = window.innerHeight
+    const curWidth = window.innerWidth
+    const curHeight = window.innerHeight
     if (curWidth != intWidth && curHeight != intHeight) {
         CalcGrid()
     }
@@ -79,7 +83,7 @@ window.onresize = () => {
 
 // Mouse move effect
 window.onmousemove = (ev) => {
-    let position = Math.floor(ev.x / 100) + Math.floor(ev.y / 100) * columns;
+    const position = Math.floor(ev.x / 100) + Math.floor(ev.y / 100) * columns;
     let el = container.children[position];
     try {
         el.animate({
